@@ -1,0 +1,8 @@
+module demux1x2(in,sel,out,en);
+input in;
+input sel;
+input en;
+output [1:0]out;
+assign out[0]=in&~sel&en;
+assign out[1]=in&sel&en;
+endmodule
