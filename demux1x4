@@ -1,0 +1,9 @@
+module demux1x4(in,sel,out);
+input in;
+input [1:0]sel;
+output [3:0]out;
+wire so=~sel[1];
+demux1x2 su(in,sel[0],out[1:0],so);
+demux1x2 su2(in,sel[0],out[3:2],sel[1]);
+
+endmodule
